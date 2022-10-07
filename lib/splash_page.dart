@@ -22,7 +22,7 @@ class _SplashPageState extends State<SplashPage> {
 
   checkData() async {
     SharedPreferences sp = await SharedPreferences.getInstance();
-    bool islogin = sp.getBool('islogin') ?? false;
+    bool islogin = sp.getBool('islogin') ?? true;
     String usertype = sp.getString('usertype') ?? '';
     if (islogin == true) {
       Timer(const Duration(seconds: 3), () {
